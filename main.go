@@ -10,6 +10,7 @@ func main() {
 	app := fiber.New()
 
 	routes.SetupRoutes(app)
+
 	err := app.Listen(":8000")
 	if err != nil {
 		panic(err)
