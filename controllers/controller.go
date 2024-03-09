@@ -2,6 +2,7 @@ package controllers
 
 import (
 	"fmt"
+	"net/http"
 	"strings"
 
 	"github.com/gocolly/colly"
@@ -48,4 +49,8 @@ func Index(c *fiber.Ctx) error {
 	}
 
 	return c.JSON(stocks)
+}
+
+func HealthCheck(c *fiber.Ctx) error {
+	return c.SendStatus(http.StatusOK)
 }
