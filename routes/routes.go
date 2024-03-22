@@ -1,7 +1,7 @@
 package routes
 
 import (
-	"go-whatsapp/controllers"
+	"import/controllers"
 
 	"github.com/gofiber/fiber/v2"
 )

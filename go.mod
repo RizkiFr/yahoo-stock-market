@@ -1,4 +1,4 @@
-module go-whatsapp
+module import
 
 go 1.22.0
 

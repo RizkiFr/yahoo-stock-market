@@ -1,7 +1,7 @@
 package main
 
 import (
-	"go-whatsapp/routes"
+	"import/routes"
 	"os"
 
 	"github.com/gofiber/fiber/v2"
@@ -10,7 +10,7 @@ import (
 func main() {
 	port := os.Getenv("PORT")
 	if port == "" {
-		port = "8000" // Default port if not specified
+		port = "8000"
 	}
 	app := fiber.New()
 

@@ -1,7 +1,6 @@
 package controllers
 
 import (
-	"fmt"
 	"net/http"
 	"strings"
 
@@ -36,10 +35,7 @@ func Index(c *fiber.Ctx) error {
 
 	go func() {
 		for _, sym := range symbol {
-			err := cl.Visit(url + sym)
-			if err != nil {
-				fmt.Println(err)
-			}
+			cl.Visit(url + sym)
 		}
 		close(results)
 	}()
